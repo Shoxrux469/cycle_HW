@@ -1,14 +1,14 @@
 // 1
-// let password;
-// for (let i = 0; i < 3; i++) {
-//   password = +prompt("Enter your password");
-//   if (password === 7777) {
-//     console.log(password);
-//     break;
-//   } else {
-//     console.log("Wrong password");
-//   }
-// }
+let password;
+for (let i = 0; i < 3; i++) {
+  password = +prompt("Enter your password");
+  if (password === 7777) {
+    console.log(password);
+    break;
+  } else {
+    console.log("Wrong password");
+  }
+}
 
 // 2
 // Отфильтровать задачи в переменные а и b
@@ -91,16 +91,12 @@ arr.forEach((elem) => {
   if (elem.completed === true) {
     a.arr.push(elem);
     a.count += 1;
-  }
-});
-arr.forEach((elem) => {
-  if (elem.completed === false) {
+  } else {
     b.arr.push(elem);
     b.count += 1;
   }
 });
-console.log(a);
-console.log(b);
+console.log(a, b);
 // 3
 // Раскидать людей в разные массивы в зависимости от их почты
 let users = [
@@ -359,7 +355,7 @@ users.forEach((item) => {
   if (emails[emailEnds[emailEnds.length - 1]]) {
     emails[emailEnds[emailEnds.length - 1]].push(item);
   } else {
-    other.push(item);
+    other.push(item)
   }
 });
-console.log(emails, other);
+console.log(emails, other)

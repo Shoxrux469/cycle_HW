@@ -88,7 +88,7 @@ let b = {
   arr: [],
 };
 arr.forEach((elem) => {
-  if (elem.completed === true) {
+  if (elem.completed === true) {  
     a.arr.push(elem);
     a.count += 1;
   } else {
@@ -351,11 +351,12 @@ let other = [];
 // console.log(emails, other)
 
 users.forEach((item) => {
-  let emailEnds = item.email.split(".");
-  if (emails[emailEnds[emailEnds.length - 1]]) {
-    emails[emailEnds[emailEnds.length - 1]].push(item);
+  let emailEnds = item.email.split(".").at(-1);
+  if (emails[emailEnds]) {
+    emails[emailEnds].push(item);
   } else {
     other.push(item)
   }
 });
 console.log(emails, other)
+
